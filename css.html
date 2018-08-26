@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=D, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">   -->
+    <link rel="icon" href="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/rypy_logo.gif" type="gif">
+    <link rel="stylesheet" href="css.css">
+    <title>css</title>
+</head>
+<body>
+   <p>параграфы имеют зеленый цвет текста и серый фон.</p>
+   </br>
+   
+   <!-- Селекторы идентификаторов и классов
+
+Селекторы идентификаторов позволяют вам изменять стиль элемента HTML,
+который имеет атрибут id,  несмотря на его позицию в дереве документа. 
+Пример селектора id:
+
+<div id="intro">
+   <p> This paragraph is in the intro section.</p>
+</div>
+<p> This paragraph is not in the intro section.</p>
+
+#intro {
+   color: white;
+   background-color: gray;
+}
+
+Селекторы классов работают похожим образом. Главным различием является то,
+что в документе какой-нибудь класс может быть присвоен сразу нескольким элементам, 
+а идентификатор – только одному. 
+
+В нижеуказанном примере, на оба параграфа, содержащих класс "first", будет влиять CSS: 
+
+<div>
+   <p class="first">This is a paragraph</p>
+   <p> This is the second paragraph. </p>
+</div>
+<p class="first"> This is not in the intro section</p>
+<p> The second paragraph is not in the intro section. </p>
+
+.first {font-size: 200%;} -->
+
+<!-- Селектор потомков
+
+Эти селекторы используются для выбора элементов, которые являются потомками 
+других элементов. При выборе уровней, вы можете выбрать столько уровней в глубину,
+сколько вам нужно. 
+
+Например, чтобы выбрать только элементы <em> в первом параграфе секции "intro": -->
+    <div id="intro">
+       <p class="first">This is a <em> paragraph.</em></p>
+       <p> This is the second paragraph. </p>
+    </div>
+    
+    </br>
+
+<!-- Свойство font-style обычно используется для применения курсивного начертания к тексту.
+
+Свойство font-style имеет три значения: normal, italic, и oblique. 
+Oblique(наклонный шрифт) очень похож на курсив, но является менее поддерживаемым. -->
+
+    <p class="italic">This is a paragraph in italic style.</p>
+    
+    </br>
+    
+<!-- Свойство font-weight управляет толщиной текста. Могут быть установлены значения normal 
+(размер по умолчанию), bold, bolder, и lighter. -->
+    
+    <p class="light">This is a font with a "lighter" weight.</p>
+    <p class="bold">This is a font with a "bold" weight.</p>
+    <p class="bolder">This is a font with a "bolder" weight.</p>
+    
+    </br>
+    
+    <p class="normal">Paragraph font variant set to normal.</p>
+    <p class="small">Paragraph font variant set to small-caps.</p>
+    
+    </br>
+    
+    <p class="left">This paragraph is aligned to <strong>left.</strong></p>
+    <p class="center">This paragraph is aligned to <strong>center.</strong></p>
+    <p class="right">This paragraph is aligned to <strong>right.</strong></p>
+
+    
+    </br>
+    
+    <table border="1" cellpadding="2" cellspacing="0" style="height: 100px;">
+      <tr>
+         <td class="top">Top</td>
+         <td class="middle">Middle</td>
+         <td class="bottom">Bottom</td>
+      </tr>
+    </table>
+    
+    </br></br>
+
+    <p>This is an <span class="baseline">inline text</span> example.</p>
+    <p>This is a <span class="sub">sub line text</span> example.</p>
+    <p> This is a <span class="super">super line text</span> example.</p>
+    <p> This is a <span class="pixel">pixel</span> example.</p>
+    
+    </br>
+
+    <div class="main">
+       <div class="paragraph">
+       This text is aligned to the middle
+       </div>
+    </div>
+    
+    </br></br></br>
+
+    <p class="none">This is default style of the text (none).</p>
+    <p class="inherit">This text inherits the decoration of the parent.</p>
+    <p class="overline">This is overlined text.</p>
+    <p class="underline">This is underlined text.</p>
+    <p class="line-through">This is lined-through text.</p>
+    
+    </br>
+    
+    <p class="blink">blink.</p>
+    
+    </br>
+    
+    <p class="indent">This is an example of 
+    <strong>text-indent </strong> property. 
+    First line of our text is indented to the right in 60px. 
+    Besides pixels you can also use other measurement units, 
+    like pt, cm, em, etc. </p>
+    
+    </br>
+    
+    <h1>Text-shadow example</h1>
+    
+    </br>
+    
+    <h1 class="blur">Text-shadow with blur effect</h1>
+    
+    </br>
+    
+    <p class="capitalize">
+    The value capitalize transforms the first 
+    character in each word to uppercase; 
+    all other characters remain unaffected.
+    </p>
+    
+    </br>
+    
+    <p class="uppercase">This value transforms all characters to uppercase.</p>
+    <p class="lowercase">This value transforms all characters to lowercase.</p>
+    
+    </br>
+    
+    <p class="normal">This paragraph has no additional letter-spacing applied.</p>
+    <p class="positive ">This paragraph is letter-spaced at 4px.</p>
+    
+    </br>
+
+    <p class="positive">This paragraph is letter-spaced at 4px.</p>
+    <p class="negative">This paragraph is letter-spaced at -1.5px</p>
+    
+    </br>
+    
+    <p class="normal">This paragraph has no additional word-spacing applied.</p>
+    <p class="px">This paragraph is word-spaced at 30px.</p>
+    
+    </br>
+    
+    <p class="positive2">This paragraph is word-spaced at 20px.</p>
+    <p class="negative2">This paragraph is word-spaced at -5px.</p>
+    
+    </br>
+    
+    <p class="white-space">
+    This paragraph has         multiple spaces      and
+    a line break, but it will be ignored, as we used the nowrap value. 
+    </p>
+    
+    </br>
+    
+    <p class="pre"> 
+    In the markup we have multiple            spaces 
+    and a line break. 
+    </p>
+    <p class="preline"> 
+    In the markup we have multiple            spaces 
+    and a line break, but in the result multiple spaces are ignored. 
+    </p>
+    <p class="prewrap"> 
+    In the markup we have              multiple 
+    spaces and a line break.
+    </p>
+    
+    Блочная Модель языка CSS
+    </br>
+    
+    <img id="div0" src="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/div.jpg" alt="div block">
+    <img id="div1" src="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/div1.jpg" alt="div block">    
+ 
+    </br></br>
+ 
+    <img id="div2" src="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/div2.jpg" alt="div block">    
+    <img id="div3" src="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/div3.jpg" alt="div block"> 
+    
+    </br></br></br>
+ 
+    <p id="border">This is an example of a solid border.</p>
+    
+    </br>
+    
+    <p class="first">
+    Border width of this paragraph is set to 2px.
+    </p>
+    <p class="second">
+    Border width of this paragraph is set to 5px.
+    </p>
+
+    </br>
+    
+    <p class="first1">
+   Border color has been created using <strong>color name.</strong>
+    </p>
+    <p class="second1">
+   Border color has been created using <strong>Hex values.</strong> 
+    </p>
+    <p class="third1">
+   Border color has been created using <strong>RGB values.</strong> 
+    </p>
+    
+    </br>
+    
+    <p class="none">This paragraph has no border.</p>
+    <p class="dotted">This is a dotted border.</p>
+    <p class="dashed">This is a dashed border.</p>
+    <p class="double">This is a double border.</p>
+    <p class="groove">This is a grooved border.</p>
+    <p class="ridge">This is a ridged border.</p>
+    <p class="inset">This is an inset border.</p>
+    <p class="outset">This is an outset border.</p>
+    <p class="hidden">This is a hidden border.</p>
+    
+    </br>
+    
+    <div id="div4">The total width and height of this element is 200px.</div>
+    
+    </br>
+    
+    <div id="div5">The total width of this element is 
+    <strong>100%</strong> and the total height is <strong>100px</strong> .</div>
+    
+    </br>
+    
+    <p class="first1">The <strong>minimum height </strong> of this paragraph is set to 150px.</p>
+    <p class="second1">The<strong> maximum width </strong> of this paragraph is set to 150px.</p>
+    
+    </br>
+    
+    <p class="first1">The background color of this page is set to LightSkyBlue.</p>
+    
+    </br>
+    
+    <h1 class="h11">This is a heading</h1>
+    <p class="p11">This is a paragraph</p>
+    
+    </br>
+    
+    <p id="p_img">This paragraph has a background image.</p>
+    
+    </br>
+    
+    <p id="p_img1">This paragraph has a background image.</p>
+    
+    </br>
+    
+    <p id="p_img2">This paragraph has a background image.</p>
+    
+    </br>
+    
+    <p id="bg_img">This paragraph has a background image.</p>
+    
+    </br>
+    
+    <ol class="lower-alpha">
+       <li>Red</li>
+       <li>Green</li>
+       <li>Blue</li>
+    </ol>
+    <ul class="circle">
+       <li>Red</li>
+       <li>Green</li>
+       <li>Blue</li>
+    </ul>
+    <ul class="square">
+       <li>Red</li>
+       <li>Green</li>
+       <li>Blue</li>
+    </ul>
+    
+    </br>
+    
+    <p>The following list has list-style-position: <strong>inside</strong>.</p>
+    <ul class="point_img">
+       <li>Red</li>
+       <li>Green</li>
+       <li>Blue</li>
+    </ul>
+    
+    </br></br>
+    
+    <table id="table1" border="1">
+       <tr>
+         <td>Red</td>
+         <td>Green</td>
+       </tr>
+       <tr>
+          <td>Blue</td>
+          <td>Yellow</td>
+       </tr>
+    </table>
+    
+    </br>
+    
+    <table border="1">
+    <caption>Some of Our Courses</caption>
+    <tr>
+      <th>Course name</th>
+      <th>Lessons</th>
+      <th>Quizzes</th>
+    </tr>
+    <tr>
+      <td>C++</td>
+      <td>81</td>
+      <td>363</td>
+    </tr>
+    <tr>
+      <td>JavaScript</td>
+      <td>48</td>
+      <td>144</td>
+    </tr>
+    <tr>
+      <td>HTML</td>
+      <td>38</td>
+      <td>119</td>
+    </tr>
+    <tr>
+      <td>CSS</td>
+      <td>70</td>
+      <td>174</td>
+    </tr>
+    </table>
+    
+    </br>
+    
+    <table id="table5" border="1">
+      <tr>
+        <td>HTML</td>
+        <td>CSS</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td></td>
+      </tr>
+    </table>
+    
+    </br>
+    
+    <p>Table-layout is set to <strong>auto</strong></p>
+    <table id="auto">
+      <tr>
+        <td width="10%">500.000.000.000.000</td>
+        <td width="90%">20.000</td>
+      </tr>
+    </table>
+
+    <p>Table-layout is set to <strong>fixed</strong></p>
+    <table id="fixed">
+      <tr>
+        <td width="10%">500.000.000.000.000</td>
+        <td width="90%">20.000</td>
+      </tr>
+    </table>
+    
+    </br>
+    
+    <p><a id="my_site" href="http://www.sololearn.com" target="_blank">
+       This link is hovered when we mouse over it
+    </a></p>
+    
+    </br>
+    
+    <p><a id="my_site1" href="http://www.sololearn.com" target="_blank">
+       This link has no underline.
+    </a></p>
+    
+    
+    </br>
+    
+    <p id="span_my"><span style="cursor:help;">
+    Do you need help?
+    </span></p>
+    
+    </br>
+    
+    <img id="div7" src="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/cursor.jpg" alt="div block">    
+   
+    
+    </br></br>
+    
+    <p id="my_block">
+    <span>First paragraph.</span>
+    <span>Second paragraph.</span>
+    <span>Third paragraph.</span>
+    <span>Fourth paragraph.</span>
+    <span>Fifth paragraph.</span>
+    </p>
+    
+    </br>
+    
+    <p id="my_inline">
+    <span>First paragraph.</span>
+    <span>Second paragraph.</span>
+    <span>Third paragraph.</span>
+    <span>Fourth paragraph.</span>
+    <span>Fifth paragraph.</span>
+    </p>
+    
+    </br>    
+    
+    <h1>This text will not display, as we set the value to none.</h1>
+    <p>Headline of this paragraph is not displayed, as we set the value to none.</p>
+    
+    
+    </br>
+    
+    <h1>This is a heading</h1>
+    <div class="hidden">
+       This text will not display in browser.
+    </div>
+    <p>
+       The space above this paragraph is empty because 
+       the visibility of the div element is set to hidden.
+    </p>
+    
+    
+    </br>
+    
+    <p>Paragraph with no position.</p>
+    <p>Paragraph with no position.</p>
+    <p>Paragraph with no position.</p>
+    <p>Paragraph with no position.</p>
+    <p>Paragraph with no position.</p>
+    <p id="position_static">This paragraph has a static position.</p>
+    
+    </br>     
+    
+    <p>Paragraph with no position.</p>
+    <p>Paragraph with no position.</p>
+    <p>Paragraph with no position.</p>
+    <p>Paragraph with no position.</p>
+    <p>Paragraph with no position.</p>
+    <p id="position_fixed2">Fixed position.</p>
+    
+    
+    
+    <p><img id="obt_water" src="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/rypy_logo.gif" />
+    This paragraph has an image that is floated to the <strong>right.</strong> 
+    It is highly recommended to add a margin to images so that the text does 
+    not get too close to the image. If you want your text to be easily read, you 
+    should always add a few pixels between words and borders, images, 
+    and other content. 
+    This paragraph has an image that is floated to the <strong>right.</strong> 
+    It is highly recommended to add a margin to images so that the text does 
+    not get too close to the image. If you want your text to be easily read, you 
+    should always add a few pixels between words and borders, images, 
+    and other content.
+    This paragraph has an image that is floated to the <strong>right.</strong> 
+    It is highly recommended to add a margin to images so that the text does 
+    not get too close to the image. If you want your text to be easily read, you 
+    should always add a few pixels between words and borders, images, 
+    and other content.
+    </p>
+    
+    
+    </br>
+    
+    <p id="obt_water1"><img id="obt_water2" src="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/rypy_logo.gif" />
+    This paragraph has an image that is floated to the <strong>right.</strong> 
+    It is highly recommended to add a margin to images so that the text does 
+    not get too close to the image. If you want your text to be easily read, you 
+    should always add a few pixels between words and borders, images, 
+    and other content. 
+    </p>
+    
+    </br>     
+    
+    This paragraph is above the div element 
+    and is not affected by the float right property. 
+    <br /><br />
+    <div id="floating_my">
+       <img id="floating1_my" src="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/rypy_logo.gif" />
+    </div>
+    This paragraph comes after the div element 
+    and is affected by the float right property. 
+    <br /><br />
+    This paragraph also comes after the div element
+    and is affected by the float right property.
+    <br /> <br />
+    
+    </br></br></br></br>
+    
+    
+    This paragraph is above the div element 
+    and is not affected by the float right property. 
+    <br/><br/>
+    <div id="floating_my2">
+       <img src="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/rypy_logo.gif" />
+    </div>
+    This paragraph comes after the div element 
+    and is affected by the float right property. 
+    <br/><br id="clearing_my"/>
+    This paragraph is out of the floating group 
+    and is not affected by the float right property.
+    <br/> <br/>
+    
+    
+    </br>
+    
+    <div id="overflow123">
+    This text is inside the div element, which has a blue 
+    background color and is floated to the left. We set a specific 
+    height and width for the div element, and as you can see, 
+    the content cannot fit. 
+    </div>
+    
+    </br></br></br></br></br></br></br></br></br></br> </br></br> 
+    
+    <div id="overflow234">
+    This text is inside the div element, which has a blue 
+    background color and is floated to the left. We set a specific 
+    height and width for the div element, and as you can see, 
+    the content cannot fit. 
+    <img src="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/rypy_logo.gif" />
+    This text is inside the div element, which has a blue 
+    background color and is floated to the left. We set a specific 
+    height and width for the div element, and as you can see, 
+    the content cannot fit. 
+    </div>
+    
+    </br></br></br></br></br></br></br></br></br></br> 
+    
+    <div id="overflow345">
+    This text is inside the div element, which has a blue 
+    background color and is floated to the left. We set a specific 
+    height and width for the div element, and as you can see, 
+    the content cannot fit. 
+    </div>
+    
+    </br></br></br></br></br></br></br></br></br></br>
+    
+    <div id="blue_my123">Blue</div>
+    <div id="red_my123">Red</div>
+    
+    </br>     
+    
+    <div id="blue_my234">Blue</div>
+    <div id="red_my234">Red</div>
+    
+    </br>
+    
+    <div id="round">
+        Rounded corners!
+    </div>
+    
+    </br></br>
+    
+    <img id="div8" src="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/browser.jpg" alt="div block">    
+        
+    </br></br></br>
+    
+    <div id="div9">
+        Rounded Corners
+    </div>
+    
+    </br>     
+    
+    <div id="div10">
+        Rounded Corners
+    </div>
+    
+    
+    </br>
+    
+    <div id="div11"> </div> 
+         
+    
+    </br>
+    
+    <div id="div12"> </div> 
+    
+    </br> </br>      
+    
+    <div id="div13"> </div> 
+    
+    </br></br></br>
+    
+    
+    <div id="div14"> </div>
+    
+    </br>
+    
+    <div id="div15"> </div>
+    
+    </br>     
+    
+    <div id="div16"> </div>
+    
+    </br>
+    
+    <div id="div17"> </div>
+    
+    
+    </br>
+    
+    <nav>
+       <ul>
+           <li><a href="#">EAT.</a></li>
+           <li><a href="#">CODE.</a></li>
+           <li><a href="#">SLEEP.</a></li>
+           <li><a href="#">rypy</a></li>
+       </ul>
+    </nav>
+
+    <img id="div18" src="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/text-shadow.jpg" alt="div block">    
+    
+    
+    </br>
+    
+    
+    <h1 id="h1-123">This text has two shadows</h1>
+    
+    </br>
+    
+    <div id="parent444">
+       <p>First paragraph</p>
+       <p>Second paragraph</p>
+       <p>Third paragraph</p>
+       <p>Fourth paragraph</p>
+    </div>
+    
+    </br>     
+    
+    <div id="parent555">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p>Fourth paragraph</p>
+    </div>
+    
+    
+    </br>
+    
+    <p id="first555">The following example demonstrates how to use the ::first-line 
+    element to add special effect to the first line of elements in the document.</p>
+    
+    
+    </br>
+    
+    <p id="first567">The following example demonstrates how to use the ::selection 
+    element to change the color of the selected text.</p>
+    
+    </br>    
+    
+    <p>You can insert text, images, and other resources using <strong>:before </strong>pseudo element.</p>
+    <p>You can insert text, images, and other resources using <strong>:before </strong>pseudo element.</p>
+    <p>You can insert text, images, and other resources using <strong>:before </strong>pseudo element.</p>
+    
+    </br>
+    
+    <p id="fir567">This paragraph has a long word: thisisaverylongwordbutyoucantfinditinthedictionary.</p>
+    
+    
+    </br>
+    
+    <p id="fir123">This paragraph has a long word: thisisaverylongwordbutyoucantfinditinthedictionary.</p>
+    
+    </br>     
+    
+    <img id="div19" src="https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/sites.jpg" alt="div block">    
+
+    
+    </br> </br>
+    
+    <div id="div20">градиент</div>
+    
+    
+    </br></br></br>
+    
+    <div id="div21"></div>
+    
+    </br>
+
+    </br>
+    
+    <div id="div22"></div>
+    
+    </br>     
+    
+    <div id="div23"></div>
+    
+    </br></br></br>
+    
+    <div id="first123">
+        <p>background-clip: padding-box</p>
+    </div>
+    <br />
+    <div id="second123">
+        <p>background-clip: content-box</p>
+    </div>
+    
+    
+    </br>
+    
+    <div id="div24">
+        <p>background-clip: content-box</p>
+    </div>
+    
+    </br>     </br>   </br>   
+    
+    <div id="div25"></div>
+    
+    
+    </br>
+    
+    <div id="div26"></div>
+    
+    </br>     
+    
+    <div id="div27"></div>
+    
+    </br>
+    
+    <div id="div28"></div>
+    
+    
+    </br>
+    
+    <div id="empty-div">
+    <div id="green-div"></div>
+    </div>
+    
+    </br>     
+    
+    <div id="div29"></div>
+    
+    </br></br></br></br></br></br></br></br> 
+    
+    <div id="first567">элемент div умножив на коэффициент 1.5</div>
+    <br />
+    <div id="second567">элемент div умножив на коэффициент 1.5</div>
+    
+    
+    </br>
+    
+    <div id="div30">элемент div умножив на коэффициент 1.5</div>
+    
+    </br>     
+    
+    
+    
+    </br></br></br></br></br> 
+    
+    <div id="div31"></div>
+    
+    
+    </br></br></br></br> </br></br></br> 
+    
+    <div id="div32"></div>
+    
+    </br>    
+    
+    <div id="div33"></div>
+    
+    </br>
+    
+    <div id="div34"></div>
+    
+    
+    </br>
+    
+    <div id="div35"></div>
+    
+    </br>     
+    
+    <div id="div36"></div>
+    
+    </br>
+    
+    <div id="div37"></div>
+    
+    
+    </br>
+    
+    <div id="div38"></div>
+    
+    </br>
+
+    </br>
+    <div id="X">rotateX(150deg)</div>
+    <br />
+    <div id="Y">rotateY(150deg)</div>
+    <br />
+    <div id="Z">rotateZ(150deg)</div>
+    
+    </br>   </br> </br> </br>   
+    
+    <div id="mybox1"></div>
+    
+    </br></br> </br>
+    
+    
+    <div id="empty-div">
+        <div id="green-div">
+            Example
+        </div>
+    </div>
+    
+    </br></br> </br> </br> </br> </br> </br> </br> </br> </br> </br> </br> 
+    </body>
+</html>
+
+

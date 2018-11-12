@@ -1816,7 +1816,7 @@ Internet Explorer, и Opera - теперь поддерживают свойст
    height: 150px;
    width: 200px;
    border: 1px solid #179;
-   background: url("https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/rypy_logo.gif") no-repeat 50% 50%;
+   background: url("images/rypy_logo.gif") no-repeat 50% 50%;
    background-size: 170px 170px;
 }
 
@@ -1833,7 +1833,7 @@ Internet Explorer, и Opera - теперь поддерживают свойст
    height: 150px;
    width: 200px;
    border: 1px solid #179;
-   background: url("https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/rypy_logo.gif") no-repeat 50% 50%;
+   background: url("images/rypy_logo.gif") no-repeat 50% 50%;
    background-size: contain;
 }
 
@@ -1847,7 +1847,7 @@ Internet Explorer, и Opera - теперь поддерживают свойст
    height: 150px;
    width: 200px;
    border: 1px solid #179;
-   background: url("https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/rypy_logo.gif") no-repeat 50% 50%;
+   background: url("images/rypy_logo.gif") no-repeat 50% 50%;
    background-size: cover;
 }
 
@@ -1883,7 +1883,7 @@ content-box - фон отображается только внутри конт
  */ 
 
 #div24 {
-   background-image: url("https://html-css-js-evgeny-i-gurin.cs50.io/html-css-js/images/rypy_logo.gif");
+   background-image: url("images/rypy_logo.gif");
    background-clip: content-box;
 }
 

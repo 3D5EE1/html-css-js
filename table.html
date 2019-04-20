@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Тег table</title>
+    <style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		#wrapper {
+			margin: 10vh 25vw;
+			min-width: 400px;
+		}
+
+        table {
+            width: 50vw; /* Ширина таблицы */
+            background: black; /* Цвет фона таблицы */
+            color: white; /* Цвет текста */
+            border-spacing: 4px; /* Расстояние между ячейками */
+        }
+
+        td {
+            background: maroon; /* Цвет фона ячеек */
+            padding: 5px; /* Поля вокруг текста */
+			text-align: center;
+        }
+    </style>
+</head>
+<body>
+	<div id="wrapper">
+		<table>
+			<tr>
+				<td colspan="2">0</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+		</table>
+		<br>
+		<table>
+			<tr>
+				<td>0</td>
+				<td rowspan="2" colspan="2">2</td>
+			</tr>
+			<tr>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td colspan="3">3</td>
+			</tr>
+
+			<tr>
+				<td rowspan="2">4</td>
+				<td rowspan="3">5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>7</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+		</table>
+		<br>
+		<table>
+			<tr>
+				<td colspan="2">0</td>
+				<td colspan="2">1</td>
+				<td colspan="2">2</td>
+			</tr>
+			<tr>
+				<td colspan="3">3</td>
+				<td colspan="3">4</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td colspan="4" rowspan="2">6</td>
+				<td rowspan="2">7</td>
+			</tr>
+			<tr>
+				<td>8</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
